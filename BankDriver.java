@@ -1,4 +1,3 @@
-package Chapter7;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -37,6 +36,19 @@ public class BankDriver {
 				// add the customer to the array
 				// increment logical counter -- custCount
 				// handle all other possible exceptions. Index out of bounds.  And Exception as default. 
+				String fName;
+				String lName;
+				double deposit;
+				String ssn;
+
+				Scanner scan = new Scanner(System.in);
+				System.out.println("Enter a first name");
+				fName = scan.nextLine;
+				System.out.println("Enter a last name");
+				lName = scan.nextLine;
+				System.out.println("Enter the initial deposit");
+				deposit = scan.
+				System.out.println("Enter a ssn);
 			}
 
 			// ********** Choice 2 ************
