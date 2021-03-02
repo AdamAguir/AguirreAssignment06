@@ -36,19 +36,23 @@ public class BankDriver {
 				// add the customer to the array
 				// increment logical counter -- custCount
 				// handle all other possible exceptions. Index out of bounds.  And Exception as default. 
-				String fName;
-				String lName;
-				double deposit;
-				String ssn;
-
-				Scanner scan = new Scanner(System.in);
 				System.out.println("Enter a first name");
-				fName = scan.nextLine;
+				fName = input.nextLine();
 				System.out.println("Enter a last name");
-				lName = scan.nextLine;
-				System.out.println("Enter the initial deposit");
-				deposit = scan.
-				System.out.println("Enter a ssn);
+				lName = input.nextLine();
+				while (true) {
+					try {
+						System.out.println("Enter the initial deposit");
+						balance = input.nextInt();
+						break;
+					} catch (DepositTooLargeException e) {
+						input.nextLine();
+					}
+				}
+				
+				System.out.println("Enter a ssn");
+				ssn = input.nextLine();
+				input.close();
 			}
 
 			// ********** Choice 2 ************
@@ -57,6 +61,17 @@ public class BankDriver {
 				// set that index position of array to null;
 				// Exceptions to handle.  Out of bounds. And Exception as default.
 				// dont decrement logical counter
+				System.out.println("What index should be removed?");
+				int index = input.nextInt();
+				input.nextLine();
+
+				try {
+					customers[index] = null;
+				} catch (ArrayIndexOutOfBoundsException e) {
+					System.out.println(e);
+				} catch (Exception e){
+					System.out.println(e);
+				}
 			}
 			
 			
