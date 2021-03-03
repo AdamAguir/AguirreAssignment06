@@ -72,6 +72,7 @@ public class BankDriver {
 				} catch (Exception e){
 					System.out.println(e);
 				}
+				input.close();
 			}
 			
 			
@@ -112,6 +113,23 @@ public class BankDriver {
 				// make a deposit for customer, and handle possible exception. 
 				// print balance information
 				// handle any additional exceptions
+				System.out.println("What index of customer should make deposite");
+				int index = input.nextInt();
+				input.nextLine();
+				int amount = input.nextInt();
+				input.nextLine();
+				try {
+					customers[index].deposit(amount);
+				} catch (ArrayIndexOutOfBoundsException e) {
+					System.out.println(e);
+					continue;
+				} catch (NullPointerException e) {
+					System.out.println(e);
+					continue;
+				} catch (Exception e){
+					System.out.println(e);
+				}
+				input.close();
 			}
 
 			// ********** Choice 7 ************
@@ -122,6 +140,23 @@ public class BankDriver {
 				// make withdraw for cust, and handle possible exception
 				// print balance info
 				// handle any additional exceptions
+				System.out.println("What index of customer should make deposite");
+				int index = input.nextInt();
+				input.nextLine();
+				int amount = input.nextInt();
+				input.nextLine();
+				try {
+					customers[index].withdrawl(amount);
+				} catch (ArrayIndexOutOfBoundsException e) {
+					System.out.println(e);
+					continue;
+				} catch (NullPointerException e) {
+					System.out.println(e);
+					continue;
+				} catch (Exception e){
+					System.out.println(e);
+				}
+				input.close();
 				
 			}
 

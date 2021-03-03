@@ -4,7 +4,7 @@ public class Customer{
     private double balance;
     private String ssn;
 
-    public class Customer(String fName, String lName, double balance, String ssn){
+    public  Customer(String fName, String lName, double balance, String ssn){
         this.fName = fName;
         this.lName = lName;
         this.balance = balance;
@@ -20,6 +20,11 @@ public class Customer{
     }
     
     public void withdrawl(double amount){
+        try {
+            if (amount > balance) throw new InsufficientFundsException("Withdrawl amount exceeds funds in account");
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
         balance = balance - amount;
     }
 
