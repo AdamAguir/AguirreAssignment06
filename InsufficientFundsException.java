@@ -1,15 +1,13 @@
 /**
- * @author: Adam Aguirre
- * Assignment 06
- * 3/2/21
+ * @author: Adam Aguirre Assignment 06 3/2/21
  */
-public class InsufficientFundsException extends RuntimeException{
+public class InsufficientFundsException extends RuntimeException {
 
-    public InsufficientFundsException(){
+    public InsufficientFundsException() {
         super();
     }
 
-    public InsufficientFundsException(String error){
+    public InsufficientFundsException(String error) {
         super(error);
     }
 }
