@@ -1,3 +1,8 @@
+/**
+ * @author: Adam Aguirre
+ * Assignment 06
+ * 3/2/21
+ */
 public class Customer{
     private String fName;
     private String lName;
@@ -12,19 +17,19 @@ public class Customer{
     }
 
     public void deposit(double amount){
-        try {
-            if (amount >= 10000) throw new DepositTooLargeException("Amount must be smaller than 10,000");
-        } catch (DepositTooLargeException e) {
-            System.out.println(e.getLocalizedMessage());        }
+        // try {
+        //     if (amount >= 10000) throw new DepositTooLargeException("Amount must be smaller than 10,000");
+        // } catch (DepositTooLargeException e) {
+        //     System.out.println(e.getLocalizedMessage());        }
         balance = balance + amount;
     }
     
     public void withdrawl(double amount){
-        try {
-            if (amount > balance) throw new InsufficientFundsException("Withdrawl amount exceeds funds in account");
-        } catch (Exception e) {
-            //TODO: handle exception
-        }
+        // try {
+        //     if (amount > balance) throw new InsufficientFundsException("Withdrawl amount exceeds funds in account");
+        // } catch (Exception e) {
+        //     //TODO: handle exception
+        // }
         balance = balance - amount;
     }
 
@@ -45,7 +50,6 @@ public class Customer{
     }
     @Override
     public String toString() {
-        //TODO
-        return null;
+        return "Customer [fName=" + getFName() + ", lName=" + getLName() + ", ssn=" + getSsn() + ", balance=" + getBalance();
     }
 }
