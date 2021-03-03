@@ -88,6 +88,18 @@ public class BankDriver {
 				// retrieve the customer 
 				// print that customer's tostring
 				// Capture index out of bounds and null pointer. 
+				System.out.println("What customer index should be printed");
+				int index = input.nextInt();
+				input.nextLine();
+				try {
+					System.out.println(customers[index]);
+				} catch (IndexOutOfBoundsException e) {
+					System.out.println(e);
+				} catch (NullPointerException e) {
+					System.out.println(e);
+				} catch (Exception e) {
+					System.out.println(e);
+				}
 			}
 
 			// ********** Choice 5 ************
@@ -103,6 +115,13 @@ public class BankDriver {
 				// print out the success to customer with index.
 				// increment the logical counter.
 				// handle any exceptions.  
+				try (Scanner scan = new Scanner(new File(\\customer.txt))) {
+					
+				} catch (FileNotFoundException e) {
+					System.out.println(e);
+				} catch (Exception e) {
+					System.out.println(e);
+				} 
 			}
 
 			// ********** Choice 6 ************
